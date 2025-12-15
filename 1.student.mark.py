@@ -1,16 +1,8 @@
-# ===========================================
-# Student Mark Management System (No OOP)
-# Using: tuples, dicts, lists ONLY
-# ===========================================
-
-students = []       # list of dicts: {id, name, dob}
-courses = []        # list of dicts: {id, name}
-marks = {}          # dict: {course_id: {student_id: mark}}
+students = []       
+courses = []       
+marks = {}          
 
 
-# ---------------------------------------
-# INPUT FUNCTIONS
-# ---------------------------------------
 
 def input_students():
     n = int(input("Enter number of students: "))
@@ -36,12 +28,11 @@ def input_courses():
             "id": cid,
             "name": name
         })
-        marks[cid] = {}   # prepare mark storage for this course
+        marks[cid] = {}   
     print("Courses added.\n")
 
 
 def input_marks_for_course():
-    # list available courses
     print("\nAvailable courses:")
     for c in courses:
         print(f"{c['id']} - {c['name']}")
@@ -61,10 +52,6 @@ def input_marks_for_course():
 
     print("Marks saved.\n")
 
-
-# ---------------------------------------
-# LISTING FUNCTIONS
-# ---------------------------------------
 
 def list_courses():
     print("\n===== COURSE LIST =====")
@@ -101,9 +88,6 @@ def show_student_marks_by_course():
     print()
 
 
-# ---------------------------------------
-# MAIN MENU
-# ---------------------------------------
 
 def main():
     while True:
