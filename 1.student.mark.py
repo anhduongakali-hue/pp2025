@@ -2,8 +2,6 @@ students = []
 courses = []       
 marks = {}          
 
-
-
 def input_students():
     n = int(input("Enter number of students: "))
     for _ in range(n):
@@ -39,7 +37,6 @@ def input_marks_for_course():
 
     cid = input("Enter course ID to input marks: ")
 
-    # find course
     course_ids = [c["id"] for c in courses]
     if cid not in course_ids:
         print("Course not found!\n")
